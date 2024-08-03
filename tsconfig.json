@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es6", // Adjust based on your target browsers
+        "module": "es6", // Use ES6 modules for browser compatibility
+        "outDir": "./dist",
+        "rootDir": "./",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    "include": ["Web-UI"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "snailycadinstalldefaults",
+  "version": "1.0.0",
+  "description": "Allows you to install default values for an eaiser setup of SnailyCadv4.",
+  "main": "./Web-UI/server/server.js",
+  "scripts": {
+    "start": "nodemon",
+    "copy-files": "copyfiles -u 1 Web-UI/**/*.html Web-UI/**/*.css Web-UI/client/public/**/*.* Web-UI/**/*.json dist/Web-UI/",
+    "copy-config": "copyfiles CONTRIBUTORS.md LICENSE package.json package-lock.json dist/",
+    "build": "rimraf dist/ && tsc --build && npm run copy-files && npm run copy-config && webpack build",
+    "minify": "esbuild dist/**/*.js --minify --allow-overwrite --packages=external --outdir=dist/ && esbuild dist/Web-UI/**/*.css --minify --allow-overwrite --packages=external --outdir=dist/Web-UI/client/",
+    "watch": "",
+    "watch:build": "tsc --build && npm run copy-files && npm run copy-config && webpack build",
+    "watch:server": "nodemon ./dist/Web-UI/server/server.js --watch ./dist"
+  },
+  "author": "TheAFKGamer10",
+  "license": "CC-BY-NC-ND-4.0",
+  "nodemonConfig": {
+    "ignore": [
+      "Web-UI/server/templates/*",
+      "dist/Web-UI/server/*",
+      "**/*.json"
+    ]
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "express-session": "^1.18.0",
+    "node-machine-id": "^1.1.12",
+    "nodemon": "^3.1.4",
+    "path": "^0.12.7",
+    "sanitize-html": "^2.13.0"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/express": "^4.17.21",
+    "@types/express-session": "^1.18.0",
+    "@types/sanitize-html": "^2.11.0",
+    "copyfiles": "^2.4.1",
+    "crypto-browserify": "^3.12.0",
+    "esbuild": "^0.23.0",
+    "esbuild-loader": "^4.2.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.4",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
