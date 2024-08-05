@@ -59,4 +59,4 @@ To start the development server, run the following commands:
 </ol>
 
 <h1 id="license">License</h1>
-This project is licensed under the GPL-3.0 License - see the <a href="?tab=GPL-3.0-1-ov-file#readme">LICENSE</a> file for details.
+This project is licensed under the GPL-3.0 License - see the <a href="LICENSE?tab=GPL-3.0-1-ov-file#readme">LICENSE</a> file for details.
