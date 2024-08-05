@@ -59,4 +59,5 @@ To start the development server, run the following commands:
 </ol>
 
 <h1 id="license">License</h1>
-This project is licensed under the Creative Commons BY-NC-ND 4.0 License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
+```
