@@ -4,7 +4,7 @@
   "description": "Allows you to install default values for an eaiser setup of SnailyCadv4.",
   "main": "./Web-UI/server/server.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "node ./Web-UI/server/server.js",
     "copy-files": "copyfiles -u 1 Web-UI/**/*.html Web-UI/**/*.css Web-UI/client/public/**/*.* Web-UI/**/*.json dist/Web-UI/",
     "copy-config": "copyfiles CONTRIBUTORS.md LICENSE package.json package-lock.json dist/",
     "build": "rimraf dist/ && tsc --build && npm run copy-files && npm run copy-config && webpack build",
